@@ -40,8 +40,9 @@ class Quiz extends Component {
   }
   render(){
     return(
+      <div>
+      <div className="title">QuizBee</div>
       <div className="container">
-        <div className="title">QuizBee</div>
         {this.state.questionBank.length > 0 &&
         this.state.responses <5  &&
           this.state.questionBank.map(
@@ -55,6 +56,7 @@ class Quiz extends Component {
         )}
 
         {this.state.responses === 5 ? (<Result score={this.state.score} playAgain={this.playAgain}/>):null}
+      </div>
       </div>
     );
   }
